@@ -1,0 +1,122 @@
+{
+  "project_info": {
+    "project_number": "846030766527",
+    "firebase_url": "https://loginsupasit.firebaseio.com",
+    "project_id": "loginsupasit",
+    "storage_bucket": "loginsupasit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846030766527:android:055aa7a659f4174b3a210a",
+        "android_client_info": {
+          "package_name": "th.ac.kku.cis.mobileapp.project_supasit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "846030766527-11u4t32lg6qe4v159qlcr489sir1q9ck.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "th.ac.kku.cis.mobileapp.project_supasit",
+            "certificate_hash": "d2b56e04d2ee979bc5e692c099efb82f5ef7650e"
+          }
+        },
+        {
+          "client_id": "846030766527-j3uk7thsr9ed3f3lhnsa9c7fttp85lvj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzTWTvj9m1kqyoTIS2lMD-HFjr_xp8rlQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "846030766527-j3uk7thsr9ed3f3lhnsa9c7fttp85lvj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846030766527:android:64b2eda3759033033a210a",
+        "android_client_info": {
+          "package_name": "th.ac.kku.cis.mobileapp.supasitgame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "846030766527-5r39kkel2pj8mpo17o489laiq6i5r4km.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "th.ac.kku.cis.mobileapp.supasitgame",
+            "certificate_hash": "d2b56e04d2ee979bc5e692c099efb82f5ef7650e"
+          }
+        },
+        {
+          "client_id": "846030766527-j3uk7thsr9ed3f3lhnsa9c7fttp85lvj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzTWTvj9m1kqyoTIS2lMD-HFjr_xp8rlQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "846030766527-j3uk7thsr9ed3f3lhnsa9c7fttp85lvj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846030766527:android:f0684b96210a93b83a210a",
+        "android_client_info": {
+          "package_name": "th.ac.kku.cis.project_supasit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "846030766527-9nm8p11llvpd84dt69vprherltq449or.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "th.ac.kku.cis.project_supasit",
+            "certificate_hash": "d2b56e04d2ee979bc5e692c099efb82f5ef7650e"
+          }
+        },
+        {
+          "client_id": "846030766527-j3uk7thsr9ed3f3lhnsa9c7fttp85lvj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzTWTvj9m1kqyoTIS2lMD-HFjr_xp8rlQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "846030766527-j3uk7thsr9ed3f3lhnsa9c7fttp85lvj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
