@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sfvdsfv"
+    tools:context=".Level_1">
+
+
+    <LinearLayout
+        android:layout_width="212dp"
+        android:layout_height="310dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="437dp"
+        android:layout_marginBottom="205dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:textAlignment="center"
+        android:textDirection="locale"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/bt9"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="ขี่ช้างจับตั๊กแตน"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/bt10"
+            android:layout_width="172dp"
+            android:layout_height="wrap_content"
+            android:text="---"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/bt11"
+            android:layout_width="147dp"
+            android:layout_height="wrap_content"
+            android:text="ขี่ช้างจับแมลง"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/bt12"
+            android:layout_width="127dp"
+            android:layout_height="wrap_content"
+            android:text="ขี่ช้างจับยุง"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

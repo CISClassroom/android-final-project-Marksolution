@@ -69,7 +69,7 @@ class Login_main : AppCompatActivity() {
     }
 
     private fun singIn() {
-
+        singOut()
 
         if(newpropro){
             passproject()
