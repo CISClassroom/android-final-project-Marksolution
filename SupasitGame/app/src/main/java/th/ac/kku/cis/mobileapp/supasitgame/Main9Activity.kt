@@ -3,9 +3,12 @@ package th.ac.kku.cis.mobileapp.supasitgame
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import kotlinx.android.synthetic.main.activity_level_1.*
 import kotlinx.android.synthetic.main.activity_main3.*
+import kotlinx.android.synthetic.main.activity_main4.*
 import kotlinx.android.synthetic.main.activity_main5.*
 import kotlinx.android.synthetic.main.activity_main9.*
 
@@ -16,7 +19,73 @@ class Main9Activity : AppCompatActivity() {
         setContentView(R.layout.activity_main9)
         if (supportActionBar != null)
             supportActionBar?.hide()
+        object : CountDownTimer(20000, 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+                time.setText(" " + millisUntilFinished / 1000)
+            }
 
+            override fun onFinish() {
+                time.setText("หมดเวลา !!")
+
+                val builder = AlertDialog.Builder(this@Main9Activity)
+                builder.setTitle("หมดเวลาแล้ว !")
+                builder.setMessage("   >>> คุณตอบช้าเกินไปนะ ไป Level ต่อไปกันเลย !!")
+                builder.setPositiveButton("เล่นต่อ"){dialog, which ->
+                    Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
+                    var i = Intent(applicationContext, Main10Activity::class.java)
+                    i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                    startActivity(i)
+                }
+
+                val dialog: AlertDialog = builder.create()
+                dialog.show()
+
+            }
+        }.start()
+
+
+        bt33.setOnClickListener {
+            val builder = AlertDialog.Builder(this@Main9Activity)
+            builder.setTitle("เสียใจด้วย  คุณตอบผิด !")
+            builder.setMessage("  >>> ไม่เป็นไรนะสู้ๆ  ไป Level ต่อไปกันเถอะ")
+            builder.setPositiveButton("เล่นต่อ"){dialog, which ->
+                Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
+                var i = Intent(this, Main10Activity::class.java)
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(i)
+            }
+
+            val dialog: AlertDialog = builder.create()
+            dialog.show()
+        }
+        bt34.setOnClickListener {
+            val builder = AlertDialog.Builder(this@Main9Activity)
+            builder.setTitle("เสียใจด้วย  คุณตอบผิด !")
+            builder.setMessage("  >>> ไม่เป็นไรนะสู้ๆ  ไป Level ต่อไปกันเถอะ")
+            builder.setPositiveButton("เล่นต่อ"){dialog, which ->
+                Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
+                var i = Intent(this, Main10Activity::class.java)
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(i)
+            }
+
+            val dialog: AlertDialog = builder.create()
+            dialog.show()
+        }
+        bt36.setOnClickListener {
+            val builder = AlertDialog.Builder(this@Main9Activity)
+            builder.setTitle("เสียใจด้วย  คุณตอบผิด !")
+            builder.setMessage("  >>> ไม่เป็นไรนะสู้ๆ  ไป Level ต่อไปกันเถอะ")
+            builder.setPositiveButton("เล่นต่อ"){dialog, which ->
+                Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
+                var i = Intent(this, Main10Activity::class.java)
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(i)
+            }
+
+            val dialog: AlertDialog = builder.create()
+            dialog.show()
+        }
         bt35.setOnClickListener {
 
             val builder = AlertDialog.Builder(this@Main9Activity)
