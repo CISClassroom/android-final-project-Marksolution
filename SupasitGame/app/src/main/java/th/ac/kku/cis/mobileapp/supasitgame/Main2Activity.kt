@@ -44,7 +44,7 @@ class Main2Activity : AppCompatActivity() {
         }
         bt5.setOnClickListener {
             val builder = AlertDialog.Builder(this@Main2Activity)
-            builder.setTitle("เสียใจด้วย  คุณตอบถผิด !")
+            builder.setTitle("เสียใจด้วย  คุณตอบผิด !")
             builder.setMessage("  >>> ไม่เป็นไรนะสู้ๆ  ไป Level ต่อไปกันเถอะ")
             builder.setPositiveButton("เล่นต่อ"){dialog, which ->
                 Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
@@ -58,7 +58,7 @@ class Main2Activity : AppCompatActivity() {
         }
         bt6.setOnClickListener {
             val builder = AlertDialog.Builder(this@Main2Activity)
-            builder.setTitle("เสียใจด้วย  คุณตอบถผิด !")
+            builder.setTitle("เสียใจด้วย  คุณตอบผิด !")
             builder.setMessage("  >>> ไม่เป็นไรนะสู้ๆ  ไป Level ต่อไปกันเถอะ")
             builder.setPositiveButton("เล่นต่อ"){dialog, which ->
                 Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
@@ -72,7 +72,7 @@ class Main2Activity : AppCompatActivity() {
         }
         bt8.setOnClickListener {
             val builder = AlertDialog.Builder(this@Main2Activity)
-            builder.setTitle("เสียใจด้วย  คุณตอบถผิด !")
+            builder.setTitle("เสียใจด้วย  คุณตอบผิด !")
             builder.setMessage("  >>> ไม่เป็นไรนะสู้ๆ  ไป Level ต่อไปกันเถอะ")
             builder.setPositiveButton("เล่นต่อ"){dialog, which ->
                 Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
