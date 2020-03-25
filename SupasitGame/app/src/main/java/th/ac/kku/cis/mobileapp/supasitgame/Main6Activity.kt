@@ -19,7 +19,7 @@ class Main6Activity : AppCompatActivity() {
         setContentView(R.layout.activity_main6)
         if (supportActionBar != null)
             supportActionBar?.hide()
-        object : CountDownTimer(20000, 1000) {
+        object : CountDownTimer(21000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 time6.setText(" " + millisUntilFinished / 1000)
             }
@@ -29,7 +29,7 @@ class Main6Activity : AppCompatActivity() {
 
                 val builder = AlertDialog.Builder(this@Main6Activity)
                 builder.setTitle("หมดเวลาแล้ว !")
-                builder.setMessage("   >>> คุณตอบช้าเกินไปนะ ไป Level ต่อไปกันเลย !!")
+                builder.setMessage(">>> คุณตอบช้าเกินไปนะ ไป Level ต่อไปกันเลย !!")
                 builder.setPositiveButton("เล่นต่อ"){dialog, which ->
                     Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
                     var i = Intent(applicationContext, Main7Activity::class.java)
