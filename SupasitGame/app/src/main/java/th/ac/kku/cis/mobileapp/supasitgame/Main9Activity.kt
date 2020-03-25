@@ -21,11 +21,11 @@ class Main9Activity : AppCompatActivity() {
             supportActionBar?.hide()
         object : CountDownTimer(20000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
-                time.setText(" " + millisUntilFinished / 1000)
+                time9.setText(" " + millisUntilFinished / 1000)
             }
 
             override fun onFinish() {
-                time.setText("หมดเวลา !!")
+                time9.setText("หมดเวลา !!")
 
                 val builder = AlertDialog.Builder(this@Main9Activity)
                 builder.setTitle("หมดเวลาแล้ว !")
