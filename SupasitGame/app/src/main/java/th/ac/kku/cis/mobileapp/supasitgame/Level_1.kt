@@ -20,41 +20,61 @@ class Level_1 : AppCompatActivity() {
 
 
         bt1.setOnClickListener {
-
-            var i = Intent(this, Main2Activity::class.java)
-            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            startActivity(i)
-
             val builder = AlertDialog.Builder(this@Level_1)
-
-            builder.setTitle("App background color")
-
-            builder.setMessage("Are you want to set the app background color to RED?")
-
-
-            builder.setPositiveButton("YES"){dialog, which ->
-
-                Toast.makeText(applicationContext,"Ok, we change the app background.",Toast.LENGTH_SHORT).show()
-
+            builder.setTitle("ยินดีด้วย  คุณตอบถูก !!!")
+            builder.setMessage("         ----->  ไป Level ต่อไปกันเถอะ")
+            builder.setPositiveButton("เล่นต่อ"){dialog, which ->
+                Toast.makeText(applicationContext,"เยี่ยมไปเลย",Toast.LENGTH_SHORT).show()
+                var i = Intent(this, Main2Activity::class.java)
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(i)
             }
-
-
-
-            builder.setNegativeButton("No"){dialog,which ->
-                Toast.makeText(applicationContext,"You are not agree.",Toast.LENGTH_SHORT).show()
-            }
-
-
-
-            builder.setNeutralButton("Cancel"){_,_ ->
-                Toast.makeText(applicationContext,"You cancelled the dialog.",Toast.LENGTH_SHORT).show()
-            }
-
-
             val dialog: AlertDialog = builder.create()
-
-
             dialog.show()
         }
+
+        bt2.setOnClickListener {
+            val builder = AlertDialog.Builder(this@Level_1)
+            builder.setTitle("เสียใจด้วย  คุณตอบถผิด !")
+            builder.setMessage("  >>> ไม่เป็นไรนะสู้ๆ  ไป Level ต่อไปกันเถอะ")
+            builder.setPositiveButton("เล่นต่อ"){dialog, which ->
+                Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
+                var i = Intent(this, Main2Activity::class.java)
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(i)
+            }
+
+            val dialog: AlertDialog = builder.create()
+            dialog.show()
+        }
+        bt3.setOnClickListener {
+            val builder = AlertDialog.Builder(this@Level_1)
+            builder.setTitle("เสียใจด้วย  คุณตอบถผิด !")
+            builder.setMessage("   >>> ไม่เป็นไรนะสู้ๆ  ไป Level ต่อไปกันเถอะ")
+            builder.setPositiveButton("เล่นต่อ"){dialog, which ->
+                Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
+                var i = Intent(this, Main2Activity::class.java)
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(i)
+            }
+
+            val dialog: AlertDialog = builder.create()
+            dialog.show()
+        }
+        bt4.setOnClickListener {
+            val builder = AlertDialog.Builder(this@Level_1)
+            builder.setTitle("เสียใจด้วย  คุณตอบถผิด !")
+            builder.setMessage("  >>> ไม่เป็นไรนะสู้ๆ  ไป Level ต่อไปกันเถอะ")
+            builder.setPositiveButton("เล่นต่อ"){dialog, which ->
+                Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
+                var i = Intent(this, Main2Activity::class.java)
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(i)
+            }
+
+            val dialog: AlertDialog = builder.create()
+            dialog.show()
+        }
+
     }
 }
