@@ -28,28 +28,28 @@
             android:id="@+id/bt25"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:text="ขี่ช้างจับตั๊กแตน"
+            android:text="ไก่เล่นเพรช"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt26"
-            android:layout_width="172dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="------"
+            android:text="ไก่ได้พลอย"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt27"
             android:layout_width="147dp"
             android:layout_height="wrap_content"
-            android:text="ขี่ช้างจับแมลง"
+            android:text="ไก่ดูเพรช"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt28"
             android:layout_width="127dp"
             android:layout_height="wrap_content"
-            android:text="ขี่ช้างจับยุง"
+            android:text="ไก่ขโมย"
             android:textSize="18sp" />
 
     </LinearLayout>

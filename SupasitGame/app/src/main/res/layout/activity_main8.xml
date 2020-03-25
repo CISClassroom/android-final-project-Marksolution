@@ -9,50 +9,50 @@
 
 
     <LinearLayout
-        android:layout_width="212dp"
-        android:layout_height="310dp"
+        android:layout_width="240dp"
+        android:layout_height="335dp"
         android:layout_centerInParent="true"
-        android:layout_marginTop="437dp"
-        android:layout_marginBottom="205dp"
         android:gravity="center"
         android:orientation="vertical"
         android:textAlignment="center"
         android:textDirection="locale"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.857">
 
         <Button
             android:id="@+id/bt29"
-            android:layout_width="160dp"
+            android:layout_width="174dp"
             android:layout_height="wrap_content"
-            android:text="------"
+            android:text="ได้ทีขี่แพะไล่"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt30"
-            android:layout_width="172dp"
+            android:layout_width="183dp"
             android:layout_height="wrap_content"
-            android:text="ขี่ช้างเล่นกับแมลง"
+            android:text="ขี่แพะไล่ตี"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt31"
-            android:layout_width="147dp"
+            android:layout_width="172dp"
             android:layout_height="wrap_content"
-            android:text="ขี่ช้างจับแมลง"
+            android:text="กระโดขี่แพะ"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt32"
-            android:layout_width="127dp"
+            android:layout_width="171dp"
             android:layout_height="wrap_content"
             android:text="ขี่ช้างจับยุง"
             android:textSize="18sp" />
 
     </LinearLayout>
+
     <TextView
         android:id="@+id/time8"
         android:layout_width="wrap_content"

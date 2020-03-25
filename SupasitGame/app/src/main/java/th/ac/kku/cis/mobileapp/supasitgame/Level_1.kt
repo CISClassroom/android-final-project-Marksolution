@@ -15,9 +15,10 @@ class Level_1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_level_1)
-        val btnlogout: Button = findViewById(R.id.bt1)
+
         if (supportActionBar != null)
             supportActionBar?.hide()
+
 
         object : CountDownTimer(21000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
@@ -100,5 +101,7 @@ class Level_1 : AppCompatActivity() {
             dialog.show()
         }
 
+
     }
+
 }

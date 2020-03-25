@@ -26,30 +26,30 @@
 
         <Button
             android:id="@+id/bt37"
-            android:layout_width="160dp"
+            android:layout_width="145dp"
             android:layout_height="wrap_content"
-            android:text="ขี่ช้างจับตั๊กแตน"
+            android:text="จรเข้ว่ายน้ำ"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt38"
             android:layout_width="172dp"
             android:layout_height="wrap_content"
-            android:text="ขี่ช้างเล่นกับแมลง"
+            android:text="คนเล่นน้ำกับจรเข้"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt39"
             android:layout_width="147dp"
             android:layout_height="wrap_content"
-            android:text="-----"
+            android:text="สอนจรเข้ว่ายน้ำ"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt40"
-            android:layout_width="127dp"
-            android:layout_height="wrap_content"
-            android:text="ขี่ช้างจับยุง"
+            android:layout_width="149dp"
+            android:layout_height="46dp"
+            android:text="จรเข้แข่งว่ายน้ำ"
             android:textSize="18sp" />
 
     </LinearLayout>

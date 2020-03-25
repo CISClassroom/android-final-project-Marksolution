@@ -28,28 +28,28 @@
             android:id="@+id/bt17"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:text="ขี่ช้างจับตั๊กแตน"
+            android:text="ดันลังขึ้นภูเขา"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt18"
             android:layout_width="172dp"
             android:layout_height="wrap_content"
-            android:text="ขี่ช้างเล่นกับแมลง"
+            android:text="เข็นลังขึ้นภูเขา"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt19"
-            android:layout_width="147dp"
-            android:layout_height="wrap_content"
-            android:text="ขี่ช้างจับแมลง"
+            android:layout_width="180dp"
+            android:layout_height="44dp"
+            android:text="เข็นกล่องขึ้นภูเขา"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt20"
-            android:layout_width="127dp"
-            android:layout_height="wrap_content"
-            android:text="-------"
+            android:layout_width="wrap_content"
+            android:layout_height="51dp"
+            android:text="เข็นครกขึ้นภูเขา"
             android:textSize="18sp" />
 
     </LinearLayout>

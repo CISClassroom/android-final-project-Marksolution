@@ -28,28 +28,28 @@
             android:id="@+id/bt9"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:text="ขี่ช้างจับตั๊กแตน"
+            android:text="วัวกลัวเสือ"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt10"
             android:layout_width="172dp"
             android:layout_height="wrap_content"
-            android:text="---"
+            android:text="เขียนเสือให้วัวกลัว"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt11"
             android:layout_width="147dp"
             android:layout_height="wrap_content"
-            android:text="ขี่ช้างจับแมลง"
+            android:text="เขียนเสือให้วัวดู"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt12"
             android:layout_width="127dp"
             android:layout_height="wrap_content"
-            android:text="ขี่ช้างจับยุง"
+            android:text="เสือขวางวัว"
             android:textSize="18sp" />
 
     </LinearLayout>

@@ -28,28 +28,28 @@
             android:id="@+id/bt5"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:text="ขี่ช้างจับตั๊กแตน"
+            android:text="สีซออู้ให้ควายฟัง"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt6"
             android:layout_width="172dp"
             android:layout_height="wrap_content"
-            android:text="ขี่ช้างเล่นกับแมลง"
+            android:text="ร้องเพลงให้ควาย2ตัวฟัง"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt7"
             android:layout_width="147dp"
             android:layout_height="wrap_content"
-            android:text="---"
+            android:text="สีซอให้ควายฟัง"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt8"
-            android:layout_width="127dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ขี่ช้างจับยุง"
+            android:text="สีซอจนควายหลับ"
             android:textSize="18sp" />
 
     </LinearLayout>
