@@ -3,7 +3,6 @@ package th.ac.kku.cis.mobileapp.supasitgame
 import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -36,6 +35,7 @@ class Level_1 : AppCompatActivity() {
                     var i = Intent(applicationContext, Main2Activity::class.java)
                     i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                     startActivity(i)
+
                 }
 
                 val dialog: AlertDialog = builder.create()
@@ -50,9 +50,10 @@ class Level_1 : AppCompatActivity() {
             builder.setMessage("         ----->  ไป Level ต่อไปกันเถอะ")
             builder.setPositiveButton("เล่นต่อ"){dialog, which ->
                 Toast.makeText(applicationContext,"เยี่ยมไปเลย",Toast.LENGTH_SHORT).show()
-                var i = Intent(this, Main2Activity::class.java)
-                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                startActivity(i)
+                val n = 10
+                val Ba = Intent(this@Level_1, Main2Activity::class.java)
+                Ba.putExtra("EXTRA_SESSION_ID", n);
+                startActivity(Ba)
             }
             val dialog: AlertDialog = builder.create()
             dialog.show()
@@ -64,9 +65,10 @@ class Level_1 : AppCompatActivity() {
             builder.setMessage("  >>> ไม่เป็นไรนะสู้ๆ  ไป Level ต่อไปกันเถอะ")
             builder.setPositiveButton("เล่นต่อ"){dialog, which ->
                 Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
-                var i = Intent(this, Main2Activity::class.java)
-                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                startActivity(i)
+                val n = 0
+                val Ba1 = Intent(this@Level_1, Main2Activity::class.java)
+                Ba1.putExtra("EXTRA_SESSION_ID", n);
+                startActivity(Ba1)
             }
 
             val dialog: AlertDialog = builder.create()
@@ -100,6 +102,8 @@ class Level_1 : AppCompatActivity() {
             val dialog: AlertDialog = builder.create()
             dialog.show()
         }
+
+
 
 
     }

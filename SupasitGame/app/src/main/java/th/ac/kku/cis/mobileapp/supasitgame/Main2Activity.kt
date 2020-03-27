@@ -1,13 +1,12 @@
 package th.ac.kku.cis.mobileapp.supasitgame
+
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import kotlinx.android.synthetic.main.activity_level_1.*
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main2.*
-import th.ac.kku.cis.mobileapp.supasitgame.R
 
 
 class Main2Activity : AppCompatActivity() {
@@ -17,6 +16,10 @@ class Main2Activity : AppCompatActivity() {
         setContentView(R.layout.activity_main2)
         if (supportActionBar != null)
             supportActionBar?.hide()
+
+        var m:Int = 0
+        m= intent.getIntExtra("EXTRA_SESSION_ID",0)
+
         object : CountDownTimer(21000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 time2.setText(" " + millisUntilFinished / 1000)
@@ -27,7 +30,7 @@ class Main2Activity : AppCompatActivity() {
 
                 val builder = AlertDialog.Builder(this@Main2Activity)
                 builder.setTitle("หมดเวลาแล้ว !")
-                builder.setMessage(">>> คุณตอบช้าเกินไปนะ ไป Level ต่อไปกันเลย !!")
+                builder.setMessage(">>> คุณตอบช้าเกินไปนะ ไป Level ต่อไปกันเลย !!"+m)
                 builder.setPositiveButton("เล่นต่อ"){dialog, which ->
                     Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
                     var i = Intent(applicationContext, Main3Activity::class.java)

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="th.ac.kku.cis.mobileapp.supasitgame">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -10,19 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Rank">
+        <activity android:name=".Main11Activity"></activity>
+        <activity android:name=".Name" />
+        <activity android:name=".Rank"/>
+        <activity android:name=".Main10Activity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".Main10Activity" />
         <activity android:name=".Main9Activity" />
         <activity android:name=".Main8Activity" />
-        <activity android:name=".Main7Activity" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
+        <activity android:name=".Main7Activity" />
         <activity android:name=".Main6Activity" />
         <activity android:name=".Main5Activity" />
         <activity android:name=".Main4Activity" />
@@ -31,11 +32,14 @@
         <activity android:name=".Level_1" />
 
         <activity android:name=".Login_main">
-  <!--          <intent-filter>
+
+            <!--
+                <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
+            </intent-filter>
+            -->
         </activity>
         <activity android:name=".MainActivity" />
     </application>

@@ -32,7 +32,7 @@ class Main10Activity : AppCompatActivity() {
                 builder.setMessage(">>> คุณตอบช้าเกินไปนะ ไป Level ต่อไปกันเลย !!")
                 builder.setPositiveButton("เล่นต่อ"){dialog, which ->
                     Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
-                    var i = Intent(applicationContext, Rank::class.java)
+                    var i = Intent(applicationContext, Name::class.java)
                     i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                     startActivity(i)
                 }
@@ -50,7 +50,7 @@ class Main10Activity : AppCompatActivity() {
             builder.setMessage("  >>> ไม่เป็นไรนะสู้ๆ  ไป Level ต่อไปกันเถอะ")
             builder.setPositiveButton("เล่นต่อ"){dialog, which ->
                 Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
-                var i = Intent(this, Rank::class.java)
+                var i = Intent(this, Name::class.java)
                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 startActivity(i)
             }
@@ -64,7 +64,7 @@ class Main10Activity : AppCompatActivity() {
             builder.setMessage("  >>> ไม่เป็นไรนะสู้ๆ  ไป Level ต่อไปกันเถอะ")
             builder.setPositiveButton("เล่นต่อ"){dialog, which ->
                 Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
-                var i = Intent(this, Rank::class.java)
+                var i = Intent(this, Name::class.java)
                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 startActivity(i)
             }
@@ -78,7 +78,7 @@ class Main10Activity : AppCompatActivity() {
             builder.setMessage("  >>> ไม่เป็นไรนะสู้ๆ  ไป Level ต่อไปกันเถอะ")
             builder.setPositiveButton("เล่นต่อ"){dialog, which ->
                 Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
-                var i = Intent(this, Rank::class.java)
+                var i = Intent(this, Name::class.java)
                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 startActivity(i)
             }
@@ -98,9 +98,10 @@ class Main10Activity : AppCompatActivity() {
             builder.setPositiveButton("เล่นต่อ"){dialog, which ->
 
 
-                var i = Intent(this, Rank::class.java)
-                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                startActivity(i)
+                val k = 10000
+                val Ba = Intent(this@Main10Activity, Name::class.java)
+                Ba.putExtra("EXTRA_SESSION_ID", k)
+                startActivity(Ba)
 
             }
 
