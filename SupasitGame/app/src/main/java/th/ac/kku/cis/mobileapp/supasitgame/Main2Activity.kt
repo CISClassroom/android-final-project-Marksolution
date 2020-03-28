@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main2.*
+import kotlinx.android.synthetic.main.activity_name.*
 
 
 class Main2Activity : AppCompatActivity() {
@@ -19,6 +20,7 @@ class Main2Activity : AppCompatActivity() {
 
         var m:Int = 0
         m= intent.getIntExtra("EXTRA_SESSION_ID",0)
+        tv1.text =  intent.getIntExtra("EXTRA_SESSION_ID",0).toString()
 
         object : CountDownTimer(21000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
@@ -30,12 +32,12 @@ class Main2Activity : AppCompatActivity() {
 
                 val builder = AlertDialog.Builder(this@Main2Activity)
                 builder.setTitle("หมดเวลาแล้ว !")
-                builder.setMessage(">>> คุณตอบช้าเกินไปนะ ไป Level ต่อไปกันเลย !!"+m)
+                builder.setMessage(">>> คุณตอบช้าเกินไปนะ ไป Level ต่อไปกันเลย !!")
                 builder.setPositiveButton("เล่นต่อ"){dialog, which ->
                     Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
-                    var i = Intent(applicationContext, Main3Activity::class.java)
-                    i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                    startActivity(i)
+                    val Ba = Intent(this@Main2Activity, Main3Activity::class.java)
+                    Ba.putExtra("EXTRA_SESSION_ID", m);
+                    startActivity(Ba)
                 }
 
                 val dialog: AlertDialog = builder.create()
@@ -56,9 +58,10 @@ class Main2Activity : AppCompatActivity() {
             builder.setPositiveButton("เล่นต่อ"){dialog, which ->
 
                 Toast.makeText(applicationContext,"เยี่ยมไปเลย", Toast.LENGTH_SHORT).show()
-                var i = Intent(this, Main3Activity::class.java)
-                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                startActivity(i)
+                val n = m +10
+                val Ba = Intent(this@Main2Activity, Main3Activity::class.java)
+                Ba.putExtra("EXTRA_SESSION_ID", n);
+                startActivity(Ba)
 
             }
 
@@ -75,9 +78,9 @@ class Main2Activity : AppCompatActivity() {
             builder.setMessage("  >>> ไม่เป็นไรนะสู้ๆ  ไป Level ต่อไปกันเถอะ")
             builder.setPositiveButton("เล่นต่อ"){dialog, which ->
                 Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
-                var i = Intent(this, Main3Activity::class.java)
-                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                startActivity(i)
+                val Ba = Intent(this@Main2Activity, Main3Activity::class.java)
+                Ba.putExtra("EXTRA_SESSION_ID", m);
+                startActivity(Ba)
             }
 
             val dialog: AlertDialog = builder.create()
@@ -89,9 +92,9 @@ class Main2Activity : AppCompatActivity() {
             builder.setMessage("  >>> ไม่เป็นไรนะสู้ๆ  ไป Level ต่อไปกันเถอะ")
             builder.setPositiveButton("เล่นต่อ"){dialog, which ->
                 Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
-                var i = Intent(this, Main3Activity::class.java)
-                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                startActivity(i)
+                val Ba = Intent(this@Main2Activity, Main3Activity::class.java)
+                Ba.putExtra("EXTRA_SESSION_ID", m);
+                startActivity(Ba)
             }
 
             val dialog: AlertDialog = builder.create()
@@ -103,9 +106,9 @@ class Main2Activity : AppCompatActivity() {
             builder.setMessage("  >>> ไม่เป็นไรนะสู้ๆ  ไป Level ต่อไปกันเถอะ")
             builder.setPositiveButton("เล่นต่อ"){dialog, which ->
                 Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
-                var i = Intent(this, Main3Activity::class.java)
-                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                startActivity(i)
+                val Ba = Intent(this@Main2Activity, Main3Activity::class.java)
+                Ba.putExtra("EXTRA_SESSION_ID", m);
+                startActivity(Ba)
             }
 
             val dialog: AlertDialog = builder.create()

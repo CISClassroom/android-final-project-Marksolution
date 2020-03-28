@@ -21,10 +21,10 @@ class Rank : AppCompatActivity() {
         if (supportActionBar != null)
             supportActionBar?.hide()
         var students = mutableListOf<Model>()
-        var t:Int = 0
-        t= intent.getIntExtra("EXTRA_SESSION_ID",0)
+        var m:Int = 0
+        m= intent.getIntExtra("EXTRA_SESSION_ID",0)
 
-        students.add(Model("1","Mas ", "SCORE : "+tv, R.drawable.po))
+        students.add(Model("1","Mas ", "SCORE : "+m, R.drawable.po))
         students.add(Model("2","Mark ", "SCORE : ", R.drawable.po))
         students.add(Model("3","Kas ", "SCORE : ", R.drawable.po))
 

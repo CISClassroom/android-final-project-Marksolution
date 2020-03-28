@@ -11,9 +11,9 @@ import kotlinx.android.synthetic.main.activity_main10.*
 import kotlinx.android.synthetic.main.activity_name.*
 import kotlinx.android.synthetic.main.activity_rank.*
 
-class DatItem{
+class DataItem{
     companion object Factory{ // สร้างเมดทอนแบบย่อ ๆ
-        fun create():DatItem = DatItem()
+        fun create():DataItem = DataItem()
     }
     var objID:String? = null
     var data:String = ""
@@ -21,11 +21,14 @@ class DatItem{
 
 class Name : AppCompatActivity() {
     lateinit var mDB: DatabaseReference // **
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_name)
         if (supportActionBar != null)
             supportActionBar?.hide()
+        var m:Int = 0
+        m= intent.getIntExtra("EXTRA_SESSION_ID",0)
 
         tv.text =  intent.getIntExtra("EXTRA_SESSION_ID",0).toString()
 
@@ -34,12 +37,12 @@ class Name : AppCompatActivity() {
             AddData(ed1.text.toString())
             tv.text
             val tv = Intent(this@Name, Rank::class.java)
-            tv.putExtra("EXTRA_SESSION_ID", tv)
+            tv.putExtra("EXTRA_SESSION_ID", m)
             startActivity(tv)
             }
     }
     fun AddData(data:String){
-        var newData:DatItem = DatItem.create()
+        var newData:DataItem = DataItem.create()
         val obj = mDB.child("Data_item").push()
         newData.data = data
         newData.objID = obj.key

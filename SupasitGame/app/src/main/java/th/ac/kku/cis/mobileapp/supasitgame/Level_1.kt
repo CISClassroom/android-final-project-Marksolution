@@ -18,7 +18,7 @@ class Level_1 : AppCompatActivity() {
         if (supportActionBar != null)
             supportActionBar?.hide()
 
-
+        var m:Int = 0
         object : CountDownTimer(21000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 time.setText(" " + millisUntilFinished / 1000)
@@ -32,9 +32,9 @@ class Level_1 : AppCompatActivity() {
                 builder.setMessage(">>> คุณตอบช้าเกินไปนะ ไป Level ต่อไปกันเลย !!")
                 builder.setPositiveButton("เล่นต่อ"){dialog, which ->
                     Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
-                    var i = Intent(applicationContext, Main2Activity::class.java)
-                    i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                    startActivity(i)
+                    val Ba = Intent(this@Level_1, Main2Activity::class.java)
+                    Ba.putExtra("EXTRA_SESSION_ID", m);
+                    startActivity(Ba)
 
                 }
 
@@ -52,7 +52,7 @@ class Level_1 : AppCompatActivity() {
                 Toast.makeText(applicationContext,"เยี่ยมไปเลย",Toast.LENGTH_SHORT).show()
                 val n = 10
                 val Ba = Intent(this@Level_1, Main2Activity::class.java)
-                Ba.putExtra("EXTRA_SESSION_ID", n);
+                Ba.putExtra("EXTRA_SESSION_ID", n)
                 startActivity(Ba)
             }
             val dialog: AlertDialog = builder.create()
@@ -65,10 +65,9 @@ class Level_1 : AppCompatActivity() {
             builder.setMessage("  >>> ไม่เป็นไรนะสู้ๆ  ไป Level ต่อไปกันเถอะ")
             builder.setPositiveButton("เล่นต่อ"){dialog, which ->
                 Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
-                val n = 0
-                val Ba1 = Intent(this@Level_1, Main2Activity::class.java)
-                Ba1.putExtra("EXTRA_SESSION_ID", n);
-                startActivity(Ba1)
+                val Ba = Intent(this@Level_1, Main2Activity::class.java)
+                Ba.putExtra("EXTRA_SESSION_ID", m);
+                startActivity(Ba)
             }
 
             val dialog: AlertDialog = builder.create()
@@ -80,9 +79,9 @@ class Level_1 : AppCompatActivity() {
             builder.setMessage("   >>> ไม่เป็นไรนะสู้ๆ  ไป Level ต่อไปกันเถอะ")
             builder.setPositiveButton("เล่นต่อ"){dialog, which ->
                 Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
-                var i = Intent(this, Main2Activity::class.java)
-                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                startActivity(i)
+                val Ba = Intent(this@Level_1, Main2Activity::class.java)
+                Ba.putExtra("EXTRA_SESSION_ID", m)
+                startActivity(Ba)
             }
 
             val dialog: AlertDialog = builder.create()
@@ -94,9 +93,9 @@ class Level_1 : AppCompatActivity() {
             builder.setMessage("  >>> ไม่เป็นไรนะสู้ๆ  ไป Level ต่อไปกันเถอะ")
             builder.setPositiveButton("เล่นต่อ"){dialog, which ->
                 Toast.makeText(applicationContext,"สู้ๆ นะ <3 ",Toast.LENGTH_SHORT).show()
-                var i = Intent(this, Main2Activity::class.java)
-                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                startActivity(i)
+                val Ba = Intent(this@Level_1, Main2Activity::class.java)
+                Ba.putExtra("EXTRA_SESSION_ID", m)
+                startActivity(Ba)
             }
 
             val dialog: AlertDialog = builder.create()

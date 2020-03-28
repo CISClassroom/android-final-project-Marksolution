@@ -15,12 +15,15 @@
         <activity android:name=".Name" />
         <activity android:name=".Rank"/>
         <activity android:name=".Main10Activity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+    <activity android:name=".Login_main">
+
+    </activity>
         <activity android:name=".Main9Activity" />
         <activity android:name=".Main8Activity" />
         <activity android:name=".Main7Activity" />
@@ -29,18 +32,8 @@
         <activity android:name=".Main4Activity" />
         <activity android:name=".Main3Activity" />
         <activity android:name=".Main2Activity" />
-        <activity android:name=".Level_1" />
+        <activity android:name=".Level_1"/>
 
-        <activity android:name=".Login_main">
-
-            <!--
-                <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
-        </activity>
         <activity android:name=".MainActivity" />
     </application>
 
