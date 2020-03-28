@@ -13,12 +13,15 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Main11Activity"></activity>
         <activity android:name=".Name" />
-        <activity android:name=".Rank"/>
+        <activity android:name=".Rank">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity android:name=".Main10Activity" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+
     </activity>
 
     <activity android:name=".Login_main">

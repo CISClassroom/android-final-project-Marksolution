@@ -16,21 +16,16 @@ public class Adapter(val mCtx: Context,
         //return super.getView(position, convertView, parent)
         val layout: LayoutInflater = LayoutInflater.from(mCtx)
         val v: View = layout.inflate(resource, null)
-        val icon: ImageView = v.findViewById(R.id.imageView2)
+
         val name: TextView = v.findViewById(R.id.textView)
         val num: TextView = v.findViewById(R.id.textView4)
-        val id: TextView = v.findViewById(R.id.textView2)
+        val score: TextView = v.findViewById(R.id.textView2)
 
         val student: Model = items[position]
 
         name.text = student.name
-        id.text = student.id
+        score.text = student.score
         num.text = student.num
-        try {
-            icon.setImageDrawable(mCtx.getDrawable(student.icon))
-        } catch (ex: Exception) {
-
-        }
 
         return v
     }

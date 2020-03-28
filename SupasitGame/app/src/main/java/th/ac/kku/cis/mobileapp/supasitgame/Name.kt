@@ -15,8 +15,10 @@ class DataItem{
     companion object Factory{ // สร้างเมดทอนแบบย่อ ๆ
         fun create():DataItem = DataItem()
     }
-    var objID:String? = null
-    var data:String = ""
+    var Score:Float? = null
+    var Names:String? = ""
+    var objID:String? = ""
+
 }
 
 class Name : AppCompatActivity() {
@@ -34,17 +36,18 @@ class Name : AppCompatActivity() {
 
         mDB = FirebaseDatabase.getInstance().reference
         bt88.setOnClickListener {
-            AddData(ed1.text.toString())
+            AddData(tv.text.toString(),ed1.text.toString())
             tv.text
             val tv = Intent(this@Name, Rank::class.java)
             tv.putExtra("EXTRA_SESSION_ID", m)
             startActivity(tv)
             }
     }
-    fun AddData(data:String){
+    fun AddData(Score:String,name:String){
         var newData:DataItem = DataItem.create()
         val obj = mDB.child("Data_item").push()
-        newData.data = data
+        newData.Score = Score.toFloat()
+        newData.Names = name
         newData.objID = obj.key
         obj.setValue(newData)
     }
