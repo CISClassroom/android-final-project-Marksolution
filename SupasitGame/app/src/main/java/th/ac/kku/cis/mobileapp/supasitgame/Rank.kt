@@ -17,6 +17,7 @@ class Rank : AppCompatActivity() {
     lateinit var items:MutableList<Model>
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rank)
         if (supportActionBar != null)
@@ -25,17 +26,17 @@ class Rank : AppCompatActivity() {
         var m:Int = 0
         m= intent.getIntExtra("EXTRA_SESSION_ID",0)
         listView = findViewById(R.id.itemlist)
-        items = mutableListOf()
+        items = mutableListOf<Model>()
         var listview: ListView = findViewById(R.id.itemlist)
 
-        listview.adapter = Adapter(
+            listview.adapter = Adapter(
             this,
             R.layout.activity_main11, items
         )
 
         ref = FirebaseDatabase.getInstance().reference.child("Data_item")
-        ref.addValueEventListener(object : ValueEventListener {
-            override fun onCancelled(p0: DatabaseError) {
+            ref.addValueEventListener(object : ValueEventListener {
+                override fun onCancelled(p0: DatabaseError) {
             }
             override fun onDataChange(p0: DataSnapshot) {
                 items.clear()
@@ -43,53 +44,35 @@ class Rank : AppCompatActivity() {
                     items.clear()
                     var i = 1
                     for (e in p0.children){
-                      //  val rec = e.getValue(Model::class.java)
-                       // items.add(rec!!)
+
                         items.add(Model(i.toString(),e.child("names").value.toString(), "SCORE : "+e.child("score").value.toString()))
                         i+=1
                     }
+                    items.sortBy{ it.score }
+                    items.reverse()
+                    i = 0
+                    var j =1
+                    while(i<items.size){
+                        items[i].num = j.toString()
+                        j+=1
+                        i+=1
+                    }
+                    i=items.size-1
+                    while(i>9){
+                        items.removeAt(i)
+                        i-=1
+                    }
+
                     val adapter = Adapter(this@Rank,R.layout.activity_main11 ,items)
                     listView.adapter = adapter
                 }
             }
         })
 
-        /*
-        students.add(Model("1","Mas ", "SCORE : "+m))
-        students.add(Model("2","Mark ", "SCORE : "))
-        students.add(Model("3","Kas ", "SCORE : "))
-
-        var listview: ListView = findViewById(R.id.itemlist)
-
-        listview.adapter = Adapter(
-            this,
-            R.layout.activity_main11, students
-        )
-        listview.setOnItemClickListener { parent, view, position, id ->
-            //Toast.makeText(this,position.toString(),Toast.LENGTH_SHORT).show()
-            if (position == 0) {
-                var i = Intent(this, MainActivity::class.java)
-                startActivity(i)
-            }else if(position == 1) {
-                var i = Intent(this, MainActivity::class.java)
-                startActivity(i)
-            }else if(position == 2) {
-                var i = Intent(this, MainActivity::class.java)
-                startActivity(i)
-            }
-        }
-
-        vv.setOnClickListener {
-
-/*
-            var i = Intent(this, MainActivity::class.java)
-            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            startActivity(i)*/
-        }
-        */
+      }
 
 
     }
 
 
-}
+
