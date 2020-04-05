@@ -33,6 +33,11 @@ class Rank : AppCompatActivity() {
             this,
             R.layout.activity_main11, items
         )
+        vv.setOnClickListener {
+            var i = Intent(this, MainActivity::class.java)
+            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(i)
+        }
 
         ref = FirebaseDatabase.getInstance().reference.child("Data_item")
             ref.addValueEventListener(object : ValueEventListener {

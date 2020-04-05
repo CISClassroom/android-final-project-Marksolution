@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.activity_login_main.*
 class Login_main : AppCompatActivity() {
     lateinit var auth: FirebaseAuth
     lateinit var googleClient: GoogleSignInClient
-    var newpropro:Boolean = false
+    var Checklog:Boolean = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_main)
@@ -42,8 +42,8 @@ class Login_main : AppCompatActivity() {
     }
 
 
-    private fun passproject() {
-        if(newpropro) {
+    private fun passlog() {
+        if(Checklog) {
             var i = Intent(this, MainActivity::class.java)
             i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(i)
@@ -63,7 +63,7 @@ class Login_main : AppCompatActivity() {
              //show.text = "No User"
         } else {
               //show.text = user.email.toString()
-            passproject()
+            passlog()
         }
 
     }
@@ -71,8 +71,8 @@ class Login_main : AppCompatActivity() {
     private fun singIn() {
         singOut()
 
-        if(newpropro){
-            passproject()
+        if(Checklog){
+            passlog()
         }
         else {
             var signInInent = googleClient.signInIntent
@@ -90,7 +90,7 @@ class Login_main : AppCompatActivity() {
                 //FirebaseAuth(account)
             } catch (e: ApiException) {
                 Log.i("Error OOP",e.toString())
-                newpropro = false
+                Checklog = false
                 updateUI(null)
             }
         }
@@ -102,10 +102,10 @@ class Login_main : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     val user = auth.currentUser
-                    newpropro = true
+                    Checklog = true
                     updateUI(user)
                 } else {
-                    newpropro = false
+                    Checklog = false
                     updateUI(null)
                 }
             }
